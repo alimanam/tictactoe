@@ -19,6 +19,7 @@ program tictactoe.aleo {
         r1: Row,
         r2: Row,
         r3: Row,
+        r4; Row,
     }
 
     // Returns an empty board.
@@ -30,6 +31,9 @@ program tictactoe.aleo {
         };
     }
 
+    transition new() -> Board {
+        return 0;
+    }
     // Returns `true` if there exists a row, column, or diagonal with all entries occupied by the same player.
     // - `b` : A tic tac toe board.
     // - `p` : A number corresponding to a player.
